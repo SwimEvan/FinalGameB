@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
 import java.awt.Image;
-public class BattleshipGame extends JFrame {
+public class Main extends JFrame {
     private static final int ROWS = 10;
     private static final int COLS = 10;
     private static final int CELL_SIZE = 50;
@@ -18,7 +18,7 @@ public class BattleshipGame extends JFrame {
 
     ImageIcon womp = new ImageIcon("wompwomp.png");
 
-    public BattleshipGame() {
+    public Main() {
         setTitle("Battleship Game");
         setSize(ROWS * CELL_SIZE, COLS * CELL_SIZE);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -127,7 +127,7 @@ public ImageIcon getWomp(){
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            new BattleshipGame().setVisible(true);
+            new Main().setVisible(true);
         });
     }
 }
